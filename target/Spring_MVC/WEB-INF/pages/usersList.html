@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<!--<body>-->
+<!--<table>-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th> id </th>-->
+<!--        <th> name </th>-->
+<!--        <th> lastName </th>-->
+<!--        <th> emailAddress </th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    </tr>-->
+<!--    <tr th:each="user : ${users}">-->
+<!--        <td><span th:text="${user.id}"> Id </span></td>-->
+<!--        <td><span th:text="${user.name}"> Name </span></td>-->
+<!--        <td><span th:text="${user.lastName}"> Lastname </span></td>-->
+<!--        <td><span th:text="${user.emailAddress}"> Email address </span></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+<!--</body>-->
+
+<body>
+
+<div th:each="user : ${users}">
+    <a th:href="@{/{id}(id=${user.getId()})}" th:text="${user.getName()}+' '+${user.getLastName()}"></a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/new">Add new user</a>
+
+</body>
+
+</html>

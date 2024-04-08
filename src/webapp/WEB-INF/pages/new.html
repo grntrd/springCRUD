@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New user</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/}" th:object="${user}">
+    <label for="name">Enter name:</label>
+    <input type="text" th:field="*{name}" id="name">
+
+    <br/>
+
+    <label for="lastName">Enter last name:</label>
+    <input type="text" th:field="*{lastName}" id="lastName">
+
+    <br/>
+
+    <label for="emailAddress">Enter email address:</label>
+    <input type="text" th:field="*{emailAddress}" id="emailAddress">
+
+    <input type="submit" value="Create"/>
+</form>
+
+</body>
+</html>

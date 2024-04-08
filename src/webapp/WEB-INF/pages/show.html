@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+
+<p th:text="'Id: '+${user.getId()}">VALUE</p>
+<p th:text="'Name: '+${user.getName()}">VALUE</p>
+<p th:text="'Last name: '+${user.getLastName()}">VALUE</p>
+<p th:text="'Email address: '+${user.getEmailAddress()}">VALUE</p>
+<a th:href="@{/{id}/edit(id=${user.getId()})}">Edit</a>
+
+</body>
+</html>
